@@ -1,6 +1,6 @@
 ﻿namespace Calculator
 {
-    partial class Form1
+    partial class main
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -75,9 +75,17 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.button31 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button32 = new System.Windows.Forms.Button();
+            this.button33 = new System.Windows.Forms.Button();
+            this.button34 = new System.Windows.Forms.Button();
+            this.button35 = new System.Windows.Forms.Button();
+            this.lLastCount = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -438,6 +446,7 @@
             this.trackBar1.TabIndex = 3;
             this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.trackBar1.Value = 4;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // trackBar2
             // 
@@ -572,7 +581,7 @@
             // button31
             // 
             this.button31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button31.Location = new System.Drawing.Point(342, 102);
+            this.button31.Location = new System.Drawing.Point(14, 102);
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(42, 37);
             this.button31.TabIndex = 0;
@@ -580,11 +589,89 @@
             this.button31.UseVisualStyleBackColor = true;
             this.button31.Click += new System.EventHandler(this.SqrRoot);
             // 
-            // Form1
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button31);
+            this.panel1.Controls.Add(this.button34);
+            this.panel1.Controls.Add(this.button35);
+            this.panel1.Controls.Add(this.button33);
+            this.panel1.Controls.Add(this.button32);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(345, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(276, 343);
+            this.panel1.TabIndex = 5;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(5, 71);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(69, 17);
+            this.checkBox1.TabIndex = 6;
+            this.checkBox1.Text = "Расчеты";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // button32
+            // 
+            this.button32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button32.Location = new System.Drawing.Point(14, 155);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(42, 37);
+            this.button32.TabIndex = 0;
+            this.button32.Text = "sin";
+            this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.Number_Pressed);
+            // 
+            // button33
+            // 
+            this.button33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button33.Location = new System.Drawing.Point(62, 155);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(42, 37);
+            this.button33.TabIndex = 0;
+            this.button33.Text = "cos";
+            this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.Number_Pressed);
+            // 
+            // button34
+            // 
+            this.button34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button34.Location = new System.Drawing.Point(110, 155);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(42, 37);
+            this.button34.TabIndex = 0;
+            this.button34.Text = "tan";
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.Number_Pressed);
+            // 
+            // button35
+            // 
+            this.button35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button35.Location = new System.Drawing.Point(62, 102);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(42, 37);
+            this.button35.TabIndex = 0;
+            this.button35.Text = "Pi";
+            this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.Number_Pressed);
+            // 
+            // lLastCount
+            // 
+            this.lLastCount.Location = new System.Drawing.Point(230, 1);
+            this.lLastCount.Name = "lLastCount";
+            this.lLastCount.Size = new System.Drawing.Size(104, 13);
+            this.lLastCount.TabIndex = 7;
+            // 
+            // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 343);
+            this.ClientSize = new System.Drawing.Size(621, 343);
+            this.Controls.Add(this.lLastCount);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -608,7 +695,6 @@
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.button16);
-            this.Controls.Add(this.button31);
             this.Controls.Add(this.button24);
             this.Controls.Add(this.button28);
             this.Controls.Add(this.button27);
@@ -622,11 +708,12 @@
             this.Controls.Add(this.button1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "main";
             this.Text = "Калькулятор";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -681,6 +768,13 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button31;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button34;
+        private System.Windows.Forms.Button button35;
+        private System.Windows.Forms.Button button33;
+        private System.Windows.Forms.Button button32;
+        private System.Windows.Forms.Label lLastCount;
     }
 }
 

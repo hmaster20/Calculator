@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace Calculator
 {
-    public partial class Form1 : Form
+    public partial class main : Form
     {
         private double accumulator = 0;
         private char lastOperation;
-        public Form1()
+        public main()
         {
             InitializeComponent();
+
+            this.Icon = Calculator.Properties.Resources.calculator;
+            this.Size = new Size(Size.Width - panel1.Width, Size.Height);
         }
 
         private void Operator_Pressed(object sender, EventArgs e)
@@ -70,13 +73,15 @@ namespace Calculator
             }
         }
 
-        private void btnByFour_Click(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            double opr1;
-            if (double.TryParse(Display.Text, out opr1))
-            {
-                Display.Text = (opr1 / 4).ToString();
-            }
+            int size = (checkBox1.Checked) ? (Size.Width + panel1.Width) : (Size.Width - panel1.Width);
+            this.Size = new Size(size, Size.Height);
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+
         }
     }
 }
