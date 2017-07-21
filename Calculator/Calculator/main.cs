@@ -64,7 +64,7 @@ namespace Calculator
             }
         }
 
-        private void btnByTwo_Click(object sender, EventArgs e)
+        private void Degree(object sender, EventArgs e)
         {
             double opr1;
             if (double.TryParse(Display.Text, out opr1))
@@ -73,8 +73,84 @@ namespace Calculator
             }
         }
 
+        private void Sin(object sender, EventArgs e)
+        {
+            double opr1;
+            if (double.TryParse(Display.Text, out opr1))
+            {
+                Display.Text = (Math.Sin(opr1 * Math.PI / 180)).ToString();
+            }
+        }
+
+        private void Cos(object sender, EventArgs e)
+        {
+            double opr1;
+            if (double.TryParse(Display.Text, out opr1))
+            {
+                Display.Text = (Math.Cos(opr1 * Math.PI / 180)).ToString();
+            }
+        }
+
+        private void Tan(object sender, EventArgs e)
+        {
+            double opr1;
+            if (double.TryParse(Display.Text, out opr1))
+            {
+                Display.Text = (Math.Tan(opr1 * Math.PI / 180)).ToString();
+            }
+        }
+
+        private void CoTan(object sender, EventArgs e)
+        {
+            double opr1;
+            if (double.TryParse(Display.Text, out opr1))
+            {
+                Display.Text = (1 / Math.Tan(opr1 * Math.PI / 180)).ToString();
+            }
+        }
+
+        private void lg(object sender, EventArgs e)
+        {
+            double opr1;
+            if (double.TryParse(Display.Text, out opr1))
+            {
+                Display.Text = (Math.Log10(opr1)).ToString();
+            }
+        }
+
+        private void ln(object sender, EventArgs e)
+        {
+            double opr1;
+            if (double.TryParse(Display.Text, out opr1))
+            {
+                Display.Text = (Math.Log(opr1)).ToString();
+            }
+        }
+
+        private void e(object sender, EventArgs e)
+        {
+            Display.Text = (Math.E).ToString();
+        }
+        private void pi(object sender, EventArgs e)
+        {
+            Display.Text = (Math.PI).ToString();
+        }
+
+
+
+
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            if (checkBox1.Checked)
+            {
+                panel1.Visible = true;
+            }
+            else
+            {
+                panel1.Visible = false;
+            }
+
             int size = (checkBox1.Checked) ? (Size.Width + panel1.Width) : (Size.Width - panel1.Width);
             this.Size = new Size(size, Size.Height);
         }
