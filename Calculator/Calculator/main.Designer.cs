@@ -68,26 +68,26 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.RoundF = new System.Windows.Forms.Label();
+            this.Round4 = new System.Windows.Forms.Label();
+            this.Round2 = new System.Windows.Forms.Label();
+            this.Round1 = new System.Windows.Forms.Label();
+            this.RoundAdd = new System.Windows.Forms.Label();
+            this.Round0 = new System.Windows.Forms.Label();
             this.button31 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button39 = new System.Windows.Forms.Button();
             this.button34 = new System.Windows.Forms.Button();
             this.button35 = new System.Windows.Forms.Button();
+            this.button38 = new System.Windows.Forms.Button();
+            this.button37 = new System.Windows.Forms.Button();
+            this.button40 = new System.Windows.Forms.Button();
+            this.button36 = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.lLastCount = new System.Windows.Forms.Label();
-            this.button36 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button39 = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
@@ -132,7 +132,7 @@
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(42, 37);
             this.button13.TabIndex = 0;
-            this.button13.Text = "●";
+            this.button13.Text = ".";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.Number_Pressed);
             // 
@@ -525,65 +525,65 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "5/4";
             // 
-            // label7
+            // RoundF
             // 
-            this.label7.AutoSize = true;
-            this.label7.Enabled = false;
-            this.label7.Location = new System.Drawing.Point(140, 53);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(13, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "F";
+            this.RoundF.AutoSize = true;
+            this.RoundF.Enabled = false;
+            this.RoundF.Location = new System.Drawing.Point(140, 53);
+            this.RoundF.Name = "RoundF";
+            this.RoundF.Size = new System.Drawing.Size(13, 13);
+            this.RoundF.TabIndex = 4;
+            this.RoundF.Text = "F";
             // 
-            // label8
+            // Round4
             // 
-            this.label8.AutoSize = true;
-            this.label8.Enabled = false;
-            this.label8.Location = new System.Drawing.Point(155, 53);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(13, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "4";
+            this.Round4.AutoSize = true;
+            this.Round4.Enabled = false;
+            this.Round4.Location = new System.Drawing.Point(155, 53);
+            this.Round4.Name = "Round4";
+            this.Round4.Size = new System.Drawing.Size(13, 13);
+            this.Round4.TabIndex = 4;
+            this.Round4.Text = "4";
             // 
-            // label9
+            // Round2
             // 
-            this.label9.AutoSize = true;
-            this.label9.Enabled = false;
-            this.label9.Location = new System.Drawing.Point(172, 53);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(13, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "2";
+            this.Round2.AutoSize = true;
+            this.Round2.Enabled = false;
+            this.Round2.Location = new System.Drawing.Point(172, 53);
+            this.Round2.Name = "Round2";
+            this.Round2.Size = new System.Drawing.Size(13, 13);
+            this.Round2.TabIndex = 4;
+            this.Round2.Text = "2";
             // 
-            // label10
+            // Round1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Enabled = false;
-            this.label10.Location = new System.Drawing.Point(186, 53);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(13, 13);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "1";
+            this.Round1.AutoSize = true;
+            this.Round1.Enabled = false;
+            this.Round1.Location = new System.Drawing.Point(186, 53);
+            this.Round1.Name = "Round1";
+            this.Round1.Size = new System.Drawing.Size(13, 13);
+            this.Round1.TabIndex = 4;
+            this.Round1.Text = "1";
             // 
-            // label11
+            // RoundAdd
             // 
-            this.label11.AutoSize = true;
-            this.label11.Enabled = false;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(217, 52);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(26, 12);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "ADD";
+            this.RoundAdd.AutoSize = true;
+            this.RoundAdd.Enabled = false;
+            this.RoundAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RoundAdd.Location = new System.Drawing.Point(217, 52);
+            this.RoundAdd.Name = "RoundAdd";
+            this.RoundAdd.Size = new System.Drawing.Size(26, 12);
+            this.RoundAdd.TabIndex = 4;
+            this.RoundAdd.Text = "ADD";
             // 
-            // label12
+            // Round0
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(202, 53);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(13, 13);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "0";
+            this.Round0.AutoSize = true;
+            this.Round0.Location = new System.Drawing.Point(202, 53);
+            this.Round0.Name = "Round0";
+            this.Round0.Size = new System.Drawing.Size(13, 13);
+            this.Round0.TabIndex = 4;
+            this.Round0.Text = "0";
             // 
             // button31
             // 
@@ -616,6 +616,26 @@
             this.panel1.TabIndex = 5;
             this.panel1.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Математический калькулятор";
+            // 
+            // button39
+            // 
+            this.button39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button39.Location = new System.Drawing.Point(158, 155);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(42, 37);
+            this.button39.TabIndex = 0;
+            this.button39.Text = "ctg";
+            this.button39.UseVisualStyleBackColor = true;
+            this.button39.Click += new System.EventHandler(this.CoTan);
+            // 
             // button34
             // 
             this.button34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -637,6 +657,50 @@
             this.button35.Text = "Pi";
             this.button35.UseVisualStyleBackColor = true;
             this.button35.Click += new System.EventHandler(this.pi);
+            // 
+            // button38
+            // 
+            this.button38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button38.Location = new System.Drawing.Point(110, 102);
+            this.button38.Name = "button38";
+            this.button38.Size = new System.Drawing.Size(42, 37);
+            this.button38.TabIndex = 0;
+            this.button38.Text = "( )";
+            this.button38.UseVisualStyleBackColor = true;
+            this.button38.Click += new System.EventHandler(this.Number_Pressed);
+            // 
+            // button37
+            // 
+            this.button37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button37.Location = new System.Drawing.Point(110, 198);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(42, 37);
+            this.button37.TabIndex = 0;
+            this.button37.Text = "lg";
+            this.button37.UseVisualStyleBackColor = true;
+            this.button37.Click += new System.EventHandler(this.lg);
+            // 
+            // button40
+            // 
+            this.button40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button40.Location = new System.Drawing.Point(158, 102);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(42, 37);
+            this.button40.TabIndex = 0;
+            this.button40.Text = "e";
+            this.button40.UseVisualStyleBackColor = true;
+            this.button40.Click += new System.EventHandler(this.e);
+            // 
+            // button36
+            // 
+            this.button36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button36.Location = new System.Drawing.Point(158, 198);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(42, 37);
+            this.button36.TabIndex = 0;
+            this.button36.Text = "ln";
+            this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.ln);
             // 
             // button33
             // 
@@ -679,70 +743,6 @@
             this.lLastCount.Size = new System.Drawing.Size(294, 13);
             this.lLastCount.TabIndex = 7;
             // 
-            // button36
-            // 
-            this.button36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button36.Location = new System.Drawing.Point(158, 198);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(42, 37);
-            this.button36.TabIndex = 0;
-            this.button36.Text = "ln";
-            this.button36.UseVisualStyleBackColor = true;
-            this.button36.Click += new System.EventHandler(this.ln);
-            // 
-            // button37
-            // 
-            this.button37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button37.Location = new System.Drawing.Point(110, 198);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(42, 37);
-            this.button37.TabIndex = 0;
-            this.button37.Text = "lg";
-            this.button37.UseVisualStyleBackColor = true;
-            this.button37.Click += new System.EventHandler(this.lg);
-            // 
-            // button38
-            // 
-            this.button38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button38.Location = new System.Drawing.Point(110, 102);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(42, 37);
-            this.button38.TabIndex = 0;
-            this.button38.Text = "( )";
-            this.button38.UseVisualStyleBackColor = true;
-            this.button38.Click += new System.EventHandler(this.Number_Pressed);
-            // 
-            // button39
-            // 
-            this.button39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button39.Location = new System.Drawing.Point(158, 155);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(42, 37);
-            this.button39.TabIndex = 0;
-            this.button39.Text = "ctg";
-            this.button39.UseVisualStyleBackColor = true;
-            this.button39.Click += new System.EventHandler(this.CoTan);
-            // 
-            // button40
-            // 
-            this.button40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button40.Location = new System.Drawing.Point(158, 102);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(42, 37);
-            this.button40.TabIndex = 0;
-            this.button40.Text = "e";
-            this.button40.UseVisualStyleBackColor = true;
-            this.button40.Click += new System.EventHandler(this.e);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Математический калькулятор";
-            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -751,12 +751,12 @@
             this.Controls.Add(this.lLastCount);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.Round0);
+            this.Controls.Add(this.RoundAdd);
+            this.Controls.Add(this.Round1);
+            this.Controls.Add(this.Round2);
+            this.Controls.Add(this.Round4);
+            this.Controls.Add(this.RoundF);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -842,12 +842,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label RoundF;
+        private System.Windows.Forms.Label Round4;
+        private System.Windows.Forms.Label Round2;
+        private System.Windows.Forms.Label Round1;
+        private System.Windows.Forms.Label RoundAdd;
+        private System.Windows.Forms.Label Round0;
         private System.Windows.Forms.Button button31;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox checkBox1;
