@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Calculator")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Калькулятор")]
+[assembly: AssemblyDescription("Эмулятор финансового и математического калькулятора")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Calculator")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCopyright("Copyright © 2017 Бирюков Сергей")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
