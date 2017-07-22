@@ -12,6 +12,8 @@ namespace Calculator
 {
     public partial class main : Form
     {
+        List<Label> lb;
+
         private double accumulator = 0;
         private char lastOperation;
         public main()
@@ -20,6 +22,14 @@ namespace Calculator
 
             this.Icon = Calculator.Properties.Resources.calculator;
             this.Size = new Size(Size.Width - panel1.Width, Size.Height);
+
+            lb = new List<Label>();
+            lb.Add(RoundF);
+            lb.Add(Round4);
+            lb.Add(Round2);
+            lb.Add(Round1);
+            lb.Add(Round0);
+            lb.Add(RoundAdd);
         }
 
         private void Operator_Pressed(object sender, EventArgs e)
@@ -32,28 +42,116 @@ namespace Calculator
             }
             else
             {
-                double currentValue = double.Parse(Display.Text);
-                switch (lastOperation)
+                string value = (Display.Text.Contains('.')) ? (Display.Text.Replace('.', ',')) : Display.Text;
+
+                double number;
+                if (double.TryParse(value, out number))
+                //if (double.TryParse(Display.Text, out number))
                 {
-                    case '+': accumulator += currentValue; break;
-                    case '-': accumulator -= currentValue; break;
-                    case '×': accumulator *= currentValue; break;
-                    case '÷': accumulator /= currentValue; break;
-                    default: accumulator = currentValue; break;
+                    double currentValue = number;
+                    switch (lastOperation)
+                    {
+                        case '+': accumulator += currentValue; break;
+                        case '-': accumulator -= currentValue; break;
+                        case '×': accumulator *= currentValue; break;
+                        case '÷': accumulator /= currentValue; break;
+                        default: accumulator = currentValue; break;
+                    }
+
                 }
+
+                //double currentValue = double.Parse(Display.Text);
+                //switch (lastOperation)
+                //{
+                //    case '+': accumulator += currentValue; break;
+                //    case '-': accumulator -= currentValue; break;
+                //    case '×': accumulator *= currentValue; break;
+                //    case '÷': accumulator /= currentValue; break;
+                //    default: accumulator = currentValue; break;
+                //}
             }
 
             lastOperation = operation;
-            Display.Text = operation == '=' ? accumulator.ToString() : "0";
+            //Display.Text = operation == '=' ? accumulator.ToString() : "0";
+            //Display.Text = operation == '=' ? Round().ToString().Replace(',', '.') : "0";
+            Display.Text = operation == '=' ? Rounding() : "0";
+        }
+
+
+        private string Rounding()
+        {
+            double count;
+
+            switch (trackBar2.Value)
+            {
+                case 0: count = RoundUp(); break;
+                case 1: count = RoundDown(); break;
+                case 2: count = Round(); break;
+
+                default: count = Round(); break;
+            }
+
+
+            return count.ToString().Replace(',', '.');
+            //Math.Ceiling
+        }
+
+
+        private double RoundUp()
+        {
+            double count;
+            switch (trackBar1.Value)
+            {
+                case 0: count = accumulator; break; //F
+                case 1: count = Math.Round(accumulator, 4, MidpointRounding.ToEven); break;  //4
+                case 2: count = Math.Round(accumulator, 2, MidpointRounding.ToEven); break;  //2
+                case 3: count = Math.Round(accumulator, 1, MidpointRounding.ToEven); break;
+                case 4: count = Math.Round(accumulator, 0, MidpointRounding.ToEven); break;
+                default: count = accumulator; break;
+            }
+            return count;
+        }
+
+
+        private double RoundDown()
+        {
+            double count;
+            switch (trackBar1.Value)
+            {
+                case 0: count = accumulator; break; //F
+                case 1: count = Math.Round(accumulator, 4, MidpointRounding.AwayFromZero); break;  //4
+                case 2: count = Math.Round(accumulator, 2, MidpointRounding.AwayFromZero); break;  //2
+                case 3: count = Math.Round(accumulator, 1, MidpointRounding.AwayFromZero); break;
+                case 4: count = Math.Round(accumulator, 0, MidpointRounding.AwayFromZero); break;
+                default: count = accumulator; break;
+            }
+            return count;
+        }
+
+        private double Round()
+        {
+            double count;
+            switch (trackBar1.Value)
+            {
+                case 0: count = accumulator; break; //F
+                case 1: count = Math.Round(accumulator, 4); break;  //4
+                case 2: count = Math.Round(accumulator, 2); break;  //2
+                case 3: count = Math.Round(accumulator, 1); break;
+                case 4: count = Math.Round(accumulator, 0); break;
+                default: count = accumulator; break;
+            }
+            return count;
         }
 
         private void Number_Pressed(object sender, EventArgs e)
         {
-            // Add it to the display.
+            // Обработка ввода чисел
             string number = (sender as Button).Text;
+
+            if (number == "." && Display.Text.Contains('.')) return;
+
             Display.Text = Display.Text == "0" ? number : Display.Text + number;
         }
-
 
         private void SqrRoot(object sender, EventArgs e)
         {
@@ -136,10 +234,6 @@ namespace Calculator
             Display.Text = (Math.PI).ToString();
         }
 
-
-
-
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -157,7 +251,8 @@ namespace Calculator
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-
+            lb.ForEach(x => x.Enabled = false);
+            lb[trackBar1.Value].Enabled = true;
         }
     }
 }
