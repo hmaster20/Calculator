@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomizedToolTip.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,7 +84,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="image\calculator.ico" />
+    <Content Include="image\cos.png" />
+    <Content Include="image\ctg.png" />
     <Content Include="image\logo.png" />
+    <Content Include="image\sin.png" />
+    <Content Include="image\tg.png" />
     <Content Include="ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

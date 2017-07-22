@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Calculator.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,24 @@ namespace Calculator
             lb.Add(Round1);
             lb.Add(Round0);
             lb.Add(RoundAdd);
+
+            CustomizedToolTip ToolT = new CustomizedToolTip();
+            ToolT.SetToolTip(bSin, " ");
+            ToolT.SetToolTip(bCos, " ");
+            ToolT.SetToolTip(bTan, " ");
+            ToolT.SetToolTip(bCtg, " ");
+
+            ToolT.AutomaticDelay = 500;
+            ToolT.AutoPopDelay = 25000;
+            ToolT.AutoSize = false;
+            ToolT.BorderColor = Color.Black;
+
+            //ToolT.Size = new Size(Resources.sin.Size.Width, Resources.sin.Size.Height);
+            bSin.Tag = Resources.sin;
+            bCos.Tag = Resources.cos;
+            bTan.Tag = Resources.tg;
+            bCtg.Tag = Resources.ctg;
+
         }
 
         private void Operator_Pressed(object sender, EventArgs e)
@@ -225,6 +244,34 @@ namespace Calculator
             }
         }
 
+        private void Fact(object sender, EventArgs e)
+        {
+            int count;
+            if (int.TryParse(Display.Text, out count))
+            {
+                //for (int i = 2; i <= Convert.ToInt32(tb_Calc.Text); i++)
+
+                if (count < 0)
+                {
+                    MessageBox.Show("неверно указано число");
+                    return;
+                }
+
+                if (count == 0)
+                {
+                    Display.Text = "1";
+                    return;
+                }
+
+                int a = 1;
+                for (int i = 2; i <= count; i++)
+                {
+                    a = a * i;
+                }
+                Display.Text = a.ToString();
+            }
+        }
+
         private void e(object sender, EventArgs e)
         {
             Display.Text = (Math.E).ToString();
@@ -256,3 +303,4 @@ namespace Calculator
         }
     }
 }
+
