@@ -77,17 +77,18 @@
             this.button31 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button39 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
+            this.bCtg = new System.Windows.Forms.Button();
+            this.bTan = new System.Windows.Forms.Button();
             this.button35 = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
             this.button40 = new System.Windows.Forms.Button();
             this.button36 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
+            this.bCos = new System.Windows.Forms.Button();
+            this.bSin = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.lLastCount = new System.Windows.Forms.Label();
+            this.button25 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
@@ -600,15 +601,16 @@
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button31);
-            this.panel1.Controls.Add(this.button39);
-            this.panel1.Controls.Add(this.button34);
+            this.panel1.Controls.Add(this.bCtg);
+            this.panel1.Controls.Add(this.bTan);
             this.panel1.Controls.Add(this.button35);
             this.panel1.Controls.Add(this.button38);
+            this.panel1.Controls.Add(this.button25);
             this.panel1.Controls.Add(this.button37);
             this.panel1.Controls.Add(this.button40);
             this.panel1.Controls.Add(this.button36);
-            this.panel1.Controls.Add(this.button33);
-            this.panel1.Controls.Add(this.button32);
+            this.panel1.Controls.Add(this.bCos);
+            this.panel1.Controls.Add(this.bSin);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(348, 0);
             this.panel1.Name = "panel1";
@@ -625,27 +627,27 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Математический калькулятор";
             // 
-            // button39
+            // bCtg
             // 
-            this.button39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button39.Location = new System.Drawing.Point(158, 155);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(42, 37);
-            this.button39.TabIndex = 0;
-            this.button39.Text = "ctg";
-            this.button39.UseVisualStyleBackColor = true;
-            this.button39.Click += new System.EventHandler(this.CoTan);
+            this.bCtg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bCtg.Location = new System.Drawing.Point(158, 155);
+            this.bCtg.Name = "bCtg";
+            this.bCtg.Size = new System.Drawing.Size(42, 37);
+            this.bCtg.TabIndex = 0;
+            this.bCtg.Text = "ctg";
+            this.bCtg.UseVisualStyleBackColor = true;
+            this.bCtg.Click += new System.EventHandler(this.CoTan);
             // 
-            // button34
+            // bTan
             // 
-            this.button34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button34.Location = new System.Drawing.Point(110, 155);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(42, 37);
-            this.button34.TabIndex = 0;
-            this.button34.Text = "tan";
-            this.button34.UseVisualStyleBackColor = true;
-            this.button34.Click += new System.EventHandler(this.Tan);
+            this.bTan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bTan.Location = new System.Drawing.Point(110, 155);
+            this.bTan.Name = "bTan";
+            this.bTan.Size = new System.Drawing.Size(42, 37);
+            this.bTan.TabIndex = 0;
+            this.bTan.Text = "tan";
+            this.bTan.UseVisualStyleBackColor = true;
+            this.bTan.Click += new System.EventHandler(this.Tan);
             // 
             // button35
             // 
@@ -702,27 +704,27 @@
             this.button36.UseVisualStyleBackColor = true;
             this.button36.Click += new System.EventHandler(this.ln);
             // 
-            // button33
+            // bCos
             // 
-            this.button33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button33.Location = new System.Drawing.Point(62, 155);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(42, 37);
-            this.button33.TabIndex = 0;
-            this.button33.Text = "cos";
-            this.button33.UseVisualStyleBackColor = true;
-            this.button33.Click += new System.EventHandler(this.Cos);
+            this.bCos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bCos.Location = new System.Drawing.Point(62, 155);
+            this.bCos.Name = "bCos";
+            this.bCos.Size = new System.Drawing.Size(42, 37);
+            this.bCos.TabIndex = 0;
+            this.bCos.Text = "cos";
+            this.bCos.UseVisualStyleBackColor = true;
+            this.bCos.Click += new System.EventHandler(this.Cos);
             // 
-            // button32
+            // bSin
             // 
-            this.button32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button32.Location = new System.Drawing.Point(14, 155);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(42, 37);
-            this.button32.TabIndex = 0;
-            this.button32.Text = "sin";
-            this.button32.UseVisualStyleBackColor = true;
-            this.button32.Click += new System.EventHandler(this.Sin);
+            this.bSin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bSin.Location = new System.Drawing.Point(14, 155);
+            this.bSin.Name = "bSin";
+            this.bSin.Size = new System.Drawing.Size(42, 37);
+            this.bSin.TabIndex = 0;
+            this.bSin.Text = "sin";
+            this.bSin.UseVisualStyleBackColor = true;
+            this.bSin.Click += new System.EventHandler(this.Sin);
             // 
             // checkBox1
             // 
@@ -742,6 +744,17 @@
             this.lLastCount.Name = "lLastCount";
             this.lLastCount.Size = new System.Drawing.Size(294, 13);
             this.lLastCount.TabIndex = 7;
+            // 
+            // button25
+            // 
+            this.button25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button25.Location = new System.Drawing.Point(62, 198);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(42, 37);
+            this.button25.TabIndex = 0;
+            this.button25.Text = "n!";
+            this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.Fact);
             // 
             // main
             // 
@@ -851,17 +864,18 @@
         private System.Windows.Forms.Button button31;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button34;
+        private System.Windows.Forms.Button bTan;
         private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Button button32;
+        private System.Windows.Forms.Button bCos;
+        private System.Windows.Forms.Button bSin;
         private System.Windows.Forms.Label lLastCount;
         private System.Windows.Forms.Button button36;
-        private System.Windows.Forms.Button button39;
+        private System.Windows.Forms.Button bCtg;
         private System.Windows.Forms.Button button38;
         private System.Windows.Forms.Button button37;
         private System.Windows.Forms.Button button40;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button25;
     }
 }
 
